@@ -1,0 +1,11 @@
+<div class="jumbotron">
+    <h1 class="display-3">Jumbotron heading</h1>
+    <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <p>
+        <% if user_signed_in? %>
+            <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-lg btn-success', role: "button" %>
+        <% else %>
+            <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path , class: 'btn btn-lg btn-success', role: "button" %>
+        <% end %>
+    </p>
+  </div>
